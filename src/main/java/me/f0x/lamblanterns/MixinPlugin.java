@@ -12,6 +12,8 @@ import java.util.Set;
 
 public class MixinPlugin implements IMixinConfigPlugin {
 
+    private static final String IRIS_MOD_ID = "iris";
+
     @Override
     public void onLoad(String mixinPackage) {
 
@@ -19,7 +21,7 @@ public class MixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public String getRefMapperConfig() {
-        return "";
+        return null;
     }
 
     private boolean isLoaded(String modId) {
@@ -32,7 +34,10 @@ public class MixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        return isLoaded("iris");
+        if (mixinClassName.endsWith("IrisMixin")) {
+            return isLoaded(IRIS_MOD_ID);
+        }
+        return true;
     }
 
     @Override

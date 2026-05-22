@@ -10,6 +10,7 @@ import org.slf4j.LoggerFactory;
 @Mod(LambLanterns.MOD_ID)
 public class LambLanterns {
     public static final String MOD_ID = "lamblanterns";
+    public static final String LANTERN_CURIO_SLOT = "lantern";
     public static final Logger LOGGER = LoggerFactory.getLogger("LambLanterns");
 
     public LambLanterns(IEventBus modBus, ModContainer container) {

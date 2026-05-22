@@ -106,12 +106,15 @@ dependencies {
     compileOnly('dev.yumi.commons:yumi-commons-collections:1.0.0-alpha.12')    { transitive = false }
     compileOnly('dev.yumi.commons:yumi-commons-core:1.0.0-alpha.12')           { transitive = false }
 
+    // Compile-only
+    compileOnly "maven.modrinth:iris:${iris_version}"
+    compileOnly "maven.modrinth:sodium:${sodium_version}"
+
+    // Runtime-only
     runtimeOnly("org.anarres:jcpp:1.4.14")
     runtimeOnly("org.antlr:antlr4-runtime:4.13.1")
     runtimeOnly("io.github.douira:glsl-transformer:2.0.1")
-
-    implementation "maven.modrinth:iris:1.8.12+1.21.1-neoforge"
-    implementation "maven.modrinth:sodium:mc1.21.1-0.6.13-neoforge"
+    runtimeOnly "maven.modrinth:lambdynamiclights:4.8.8+1.21.1"
 }
 
 tasks.named('processResources', ProcessResources).configure {
