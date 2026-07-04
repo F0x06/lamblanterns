@@ -1,7 +1,7 @@
 # Lamb Lanterns
 
 [![Modrinth](https://img.shields.io/modrinth/dt/lamb-lanterns?logo=modrinth&label=Modrinth&color=00AF5C)](https://modrinth.com/mod/lamb-lanterns)
-[![CurseForge](https://cf.way2muchnoise.eu/full_lamb-lanterns_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/lamb-lanterns)
+[![CurseForge](https://cf.way2muchnoise.eu/full_1539815_downloads.svg)](https://www.curseforge.com/minecraft/mc-mods/lamb-lanterns)
 [![Minecraft](https://img.shields.io/modrinth/game-versions/lamb-lanterns?label=Minecraft)](https://modrinth.com/mod/lamb-lanterns)
 
 A NeoForge companion mod for [LambDynamicLights](https://lambdaurora.dev/projects/lambdynamiclights),
