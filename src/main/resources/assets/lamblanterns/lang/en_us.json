@@ -1,4 +1,12 @@
 {
   "curios.identifier.lantern": "Lantern",
-  "curios.modifiers.lantern": "When worn as lantern:"
+  "curios.modifiers.lantern": "When worn as lantern:",
+
+  "lamblanterns.configuration.position": "Lantern Position",
+  "lamblanterns.configuration.horizontalOffset": "Horizontal Offset (X)",
+  "lamblanterns.configuration.horizontalOffset.tooltip": "0.0 = centred, positive = right hip (1.0 = default), negative = left hip (-1.0). Larger magnitudes push it further off the side.",
+  "lamblanterns.configuration.verticalOffset": "Vertical Offset (Y)",
+  "lamblanterns.configuration.verticalOffset.tooltip": "Higher = raise the lantern (towards the chest), lower = drop it (towards the belt/hip). Dial to taste.",
+  "lamblanterns.configuration.depthOffset": "Depth Offset (Z)",
+  "lamblanterns.configuration.depthOffset.tooltip": "Higher = move towards the front of the body, lower = towards the back. Dial to taste."
 }

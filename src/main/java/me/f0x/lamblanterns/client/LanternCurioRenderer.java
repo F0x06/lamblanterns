@@ -3,6 +3,7 @@ package me.f0x.lamblanterns.client;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import com.mojang.math.Constants;
+import me.f0x.lamblanterns.LambLanternsConfig;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HumanoidModel;
@@ -61,8 +62,13 @@ public final class LanternCurioRenderer implements ICurioRenderer {
         // Anchor at the right-front-bottom of the body cube (the right hip / belt area).
         // Coordinate convention used: model +X is the entity's left, +Z is the entity's
         // back, +Y is down. Normalized percent: 0 = center, +1 = AABB min, -1 = AABB max,
-        // values outside [-1,1] extrapolate beyond the body.
-        transformToBody(poseStack, humanoid.body, /*xPct*/ 2.0f, /*yPct*/ -1.55f, /*zPct*/ -1.0f);
+        // values outside [-1,1] extrapolate beyond the body. Configurable via LambLanternsConfig.
+        // Horizontal config is re-centred so 0 = body centre; +1 maps to the internal
+        // right-hip anchor (xPct 2.0), hence the +1 shift.
+        transformToBody(poseStack, humanoid.body,
+                LambLanternsConfig.horizontalOffset() + 1.0f,
+                LambLanternsConfig.verticalOffset(),
+                LambLanternsConfig.depthOffset());
 
         // Rotate around the chain attachment of the lantern.
         poseStack.translate(0.5f, LANTERN_TOP, 0.5f);
